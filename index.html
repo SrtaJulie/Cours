@@ -1,38 +1,82 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8"/>
-		<title>Découverte du HTML</title>
-	</head>
-	<body>
-
-	<h1>Le HTML</h1>
-	<h2>Initiation</h2>
-	<p>Le code HTML est constitué de blocs encadré par des balises, il existe de nombreuses balises : <br/>
-    Certaines modifient le <abbr title="exemple &lt;h2/&gt;">texte</abbr>.
-    <br/> D'autres l'organisent.</p>
-    <ol>
-    	<li><dfn> <abbr title="Signifie : break row">&lt;br/&gt;</abbr> </dfn> </li>
-        <li><dfn> Voici une autre définition</dfn></li>
-    </ol>
-        <p style="font-size:230%;color:pink"> C'était une liste de définitions</p>
-       
-    	<p> Test de différente balises :</p>
-    <ul>
-    	<li> Voici un <i>test</i> </li>
-    	<li> Voici un <u>test</u> </li>
-        <li> Voici un <b>test</b> </li>
-    </ul>
-    
-    <button> Traduire le site </button>
-        
-    
-
-	</body>
-    <script>		
-		
-	alert("Promotion, 50% sur votre notre site internet !");
+		<meta charset="utf-8">
+		<title>BACHI Viaje - Grenada</title>
+		<link rel="stylesheet" href="design1.css"/>	</head>
 	
-	</script>
+		<body>
+			<div class="entete">
+			<h1 id="1">Séjour à Grenade</h1>
+			<h4><a href="pagep.html" id="0"> Retour</a></h4>
+			</div>
+			
+			<img src="NSI image Grenade.jpg" alt="Photo Grenade" width="750" height="500" />
+			<button onclick="traduction()" id="bonus2"> Traduire le site </button> <br/>
+			<p id="paragraphe1">Grenade, capitale de la province de Grenade au sud-est de l'Andalousie, est un haut lieu culturel et touristique. </br>
+			La ville abrite notamment le célèbre palais de l’Alhambra, un chef-d'œuvre de l'architecture hispano-arabe inscrit au patrimoine mondial. 
+			Son centre historique est divisé en quatre vieilles villes : l'Albaicín, situé sur la colline du même nom, inscrit au patrimoine de l'humanité par l'UNESCO depuis 1994 
+			; le Realejo-San Matías, ancien quartier juif médiéval ; le « Sacromonte », qui se trouve au nord de l'Albayzin et qui était au départ le quartier gitan, et pour finir le Centro Sagrario,
+			centre-ville façonné principalement par la période catholique, qui s'étend en dessous de la cathédrale et de la chapelle royale (où reposent les restes des Rois catholiques).</p></br>
+			
+			<h3 id="2">Séjour 3 nuits + visite guidée </br> à partir de 470€</h3> 
+			<p id="paragraphe2">3 nuits dans l'un des hôtels les plus luxueux du centre historique de Grenade et une viste guidée du palais de l'Alhambra </br>
+			</p>
+			
+			<h5 id="3"> Tarifs </h5>
+			<ul class="puces" id="puces">
+			<li> Train Toulouse/Grenade : 55€ par personne (aller/retour)</li>
+			<li>Visite : 45€ par personnes</li>
+			<li id="puce-rouge">Une chambre 2 adulte(s) : 270€ le séjour (90€/nuit)</li>
+			<li> Une chambre 2 adulte(s), 2 enfant(s) : 285€ le séjour (95€/nuit)</li>
+			<li> Appartement 2 chambres : 4 adulte(s), 2 enfant(s) : 330€ (110€/nuit)</li></ul>
+			
+			<h5 id="4"> Suppléments </h5>
+			<ul class="puces" id="puces2">
+			<li> Chien : 20€ (Maximum 25kg)</li>
+			<li> Petit déjeuner : 18€ par personne </li>
+			</ul>
+			<a href="pagefG.html" id="bonus"> Réserver </a>
+			
+			<script>
+								var version=0;		
+							function traduction()
+							{
+							if (version==0) 
+							{
+							document.getElementById("bonus").innerHTML="Reservar" ;
+							document.getElementById("bonus2").innerHTML="Traducir el sitio" ;
+							document.getElementById("0").innerHTML="Retorno" ;									
+							document.getElementById("1").innerHTML="Estancia en Granada" ;							
+							document.getElementById("2").innerHTML="Estancia 3 noches + visita guidée </br> desde 470€" ;							
+							document.getElementById("3").innerHTML="Tarifas" ;							
+							document.getElementById("4").innerHTML="Suplementos" ;					
+							document.getElementById("paragraphe1").innerHTML="Granada, capital de la provincia de Granada en el sureste de Andalucía, es una meca cultural y turística. </br> La ciudad alberga el famoso Palacio de la Alhambra, una obra maestra de la arquitectura hispanoárabe y Patrimonio de la Humanidad. Su centro histórico está dividido en cuatro ciudades antiguas: el Albaicín, situado en la colina del mismo nombre, que es Patrimonio de la Humanidad de la UNESCO desde 1994 ; el Realejo-San Matías, el antiguo barrio judío medieval; el Sacromonte, que está en el norte del Albayzín y fue originalmente el barrio gitano, y finalmente el Centro Sagrario,centro de la ciudad formado principalmente por el período católico, que se extiende debajo de la Catedral y la Capilla Real (donde descansan los restos de los Reyes Católicos)." ;
+							document.getElementById("paragraphe2").innerHTML="3 noches en uno de los hoteles más lujosos del centro histórico de Granada y una visita guiada al Palacio de la Alhambra </br>" ;
+							document.getElementById("puces").innerHTML="<li> Tren Toulouse/Granada : 55 euros por persona (ida y vuelta) </li> <li> Visita : 45 euros por persona </li> <li> Una habitación 2 adulto(s) : 270 euros por estancia (90 euros/noche) </li> <li> Una habitación 2 adulto(s), 2 niño(s) : 285 euros la estancia (95 euros/noche) </li> <li> Apartamento 2 habitaciones : 4 adulto(s), 2 niño(s) : 330 euros (110 euros/noche) </li>" ;
+							document.getElementById("puces2").innerHTML="<li> Perro : 20 euros (Máximo 25kg) </li> <li> Desayuno : 18 euros por persona </li>" ;
+							
+							version=1;
+							}
+							else 
+							{
+							document.getElementById("bonus").innerHTML="Réserver" ;							
+							document.getElementById("bonus2").innerHTML="Traduire le site" ;
+							document.getElementById("0").innerHTML="Retour" ;
+							document.getElementById("1").innerHTML="Séjour à Granade" ;							
+							document.getElementById("2").innerHTML="Séjour 3 nuits + visite guidée </br> a partir 470€" ;							
+							document.getElementById("3").innerHTML="Tarifs" ;							
+							document.getElementById("4").innerHTML="Suppléments" ;					
+							document.getElementById("paragraphe1").innerHTML="Grenade, capitale de la province de Grenade au sud-est de l'Andalousie, est un haut lieu culturel et touristique. </br> La ville abrite notamment le célèbre palais de l’Alhambra, un chef-d'œuvre de l'architecture hispano-arabe inscrit au patrimoine mondial. Son centre historique est divisé en quatre vieilles villes : l'Albaicín, situé sur la colline du même nom, inscrit au patrimoine de l'humanité par l'UNESCO depuis 1994; le Realejo-San Matías, ancien quartier juif médiéval ; le « Sacromonte », qui se trouve au nord de l'Albayzin et qui était au départ le quartier gitan, et pour finir le Centro Sagrario, centre-ville façonné principalement par la période catholique, qui s'étend en dessous de la cathédrale et de la chapelle royale (où reposent les restes des Rois catholiques)." ;
+							document.getElementById("paragraphe2").innerHTML="3 nuits dans l'un des hôtels les plus luxueux du centre historique de Grenade et une viste guidée du palais de l'Alhambra </br>" ;
+							document.getElementById("puces").innerHTML="<li> Train Toulouse/Grenade : 55€ par personne (aller/retour)</li> <li>Visite : 45€ par personnes</li> <li>Une chambre 2 adulte(s) : 270€ le séjour (90€/nuit)</li> <li> Une chambre 2 adulte(s), 2 enfant(s) : 285€ le séjour (95€/nuit)</li> <li> Appartement 2 chambres : 4 adulte(s), 2 enfant(s) : 330€ (110€/nuit)</li>" ;
+							document.getElementById("puces2").innerHTML="<li> Chien : 20€ (Maximum 25kg)</li> <li> Petit déjeuner : 18€ par personne </li>" ;
+							
+							version=0; 
+							}
+							}
+							
+			</script>
+		</body>
+		
 </html>
